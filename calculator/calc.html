@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        input{
+            width:80px;
+            height:40px;
+            background-color:lightgray;
+            color:black;
+            font-size: 16px;
+            border-radius: 5px 5px 5px 5px;
+            box-shadow: 2px 2px 2px wheat;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div style="width:400px; border:5px solid black; background-color: black;">
+        <form name="main">
+        <br>
+    <input type="text" name="result" style="width:390px;height:50px;border:2px solid black;"><br><br>
+
+    <input type="button" id="on" value="ON" onclick="onn()" style="background-color: green; color:white;">
+    <input type="button" id="off" value="OFF"  onclick="offf()" style="background-color: red; color:white;">
+    <input type="button" name="clr" value="CLR" onclick="main.result.value =''"style ="background-color:blue; color:white;"><br><br>
+
+    <input type="button" name="1" value="1" id="1" onclick="main.result.value +='1'">
+    <input type="button" name="2" value="2" id="2" onclick="main.result.value +='2'">
+    <input type="button" name="3" value="3" id="3" onclick="main.result.value +='3'">
+    <input type="button" name="+" value="+" id="+" onclick="main.result.value +='+'"><br><br>
+
+    <input type="button" name="4" value="4" id="4" onclick="main.result.value +='4'">
+    <input type="button" name="5" value="5" id="5" onclick="main.result.value +='5'">
+    <input type="button" name="6" value="6"  id="6" onclick="main.result.value +='6'">
+    <input type="button" name="-" value="-"  id="-" onclick="main.result.value +='-'"><br><br>
+
+    <input type="button" name="7" value="7"  id="7" onclick="main.result.value +='7'">
+    <input type="button" name="8" value="8" id="8" onclick="main.result.value +='8'">
+    <input type="button" name="9" value="9" id="9" onclick="main.result.value +='9'" >
+    <input type="button" name="*" value="*" id="*" onclick="main.result.value +='*'"><br><br>
+
+    <input type="button" name="^" value="exp" id="^" onclick="main.result.value +=Math.exp(main.result.value)">
+    <input type="button" name="0" value="0" id="0" onclick="main.result.value +='0'">
+    <input type="button" name="=" value="=" id="=" onclick="main.result.value = eval(main.result.value)" >
+    <input type="button" name="/" value="/" id="/" onclick="main.result.value +='/'"><br><br>
+</div>
+</form>
+</center>
+<script>
+   function offf()
+   {
+      document.getElementById('1').disabled=true;
+      document.getElementById('2').disabled=true;
+      document.getElementById('3').disabled=true;
+      document.getElementById('4').disabled=true;
+      document.getElementById('5').disabled=true;
+      document.getElementById('6').disabled=true;
+      document.getElementById('7').disabled=true;
+      document.getElementById('8').disabled=true;
+      document.getElementById('9').disabled=true;
+      document.getElementById('0').disabled=true;
+      document.getElementById('+').disabled=true;
+      document.getElementById('-').disabled=true;
+      document.getElementById('*').disabled=true;
+      document.getElementById('/').disabled=true;
+      document.getElementById('^').disabled=true;
+      document.getElementById('=').disabled=true;
+     
+   }
+   var timeoutId;
+   function onn()
+   {
+   
+      document.getElementById('1').disabled=false;
+      document.getElementById('2').disabled=false;
+      document.getElementById('3').disabled=false;
+      document.getElementById('4').disabled=false;
+      document.getElementById('5').disabled=false;
+      document.getElementById('6').disabled=false;
+      document.getElementById('7').disabled=false;
+      document.getElementById('8').disabled=false;
+      document.getElementById('9').disabled=false;
+      document.getElementById('0').disabled=false;
+      document.getElementById('+').disabled=false;
+      document.getElementById('-').disabled=false;
+      document.getElementById('*').disabled=false;
+      document.getElementById('/').disabled=false;
+      document.getElementById('^').disabled=false;
+      document.getElementById('=').disabled=false;
+     
+   }
+</script>
+</body>
+</html>
